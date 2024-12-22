@@ -14,7 +14,7 @@ module.exports = {
       });
     }
 
-    let menuText = "/// COMMAND LIST ///\n\n";
+    let menuText = "/// COMMAND LIST ///\nowner: ryo best waifu\n\n";
     for (const category in categorizedCommands) {
       menuText += `*${
         category.toString().charAt(0).toUpperCase() + category.slice(1)
