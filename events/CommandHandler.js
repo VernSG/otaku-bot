@@ -10,14 +10,8 @@ module.exports = {
       console.log(JSON.stringify(msg, null, 2));
 
       // Command handling
-      const botPrefix = new RegExp(
-        "^[" +
-          "‎xzXZ/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.\\-".replace(
-            /[|\\{}()[\]^$+*?.\-\^]/g,
-            "\\$&"
-          ) +
-          "]"
-      );
+      const botPrefix = /^!/;
+
       let usedPrefix = msg.text?.match(botPrefix)?.[0];
       if (!usedPrefix) return; // If no prefix is found, exit
 

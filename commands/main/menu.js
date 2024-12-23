@@ -14,7 +14,7 @@ module.exports = {
       });
     }
 
-    let menuText = "/// COMMAND LIST ///\nowner: ryo best waifu\n\n";
+    let menuText = "/// COMMAND LIST ///\n\nOwner: Acaa\n\n";
     for (const category in categorizedCommands) {
       menuText += `*${
         category.toString().charAt(0).toUpperCase() + category.slice(1)
@@ -22,7 +22,7 @@ module.exports = {
       for (const command of categorizedCommands[category]) {
         menuText += `- \`\`\`${usedPrefix}${command.name}\`\`\`: ${command.description}\n`;
       }
-      menuText += "\n"; // Add a blank line for next category
+      menuText += "\n";
     }
     return msg.reply(menuText);
   },
